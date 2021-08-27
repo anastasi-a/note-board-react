@@ -1,0 +1,115 @@
+.App {
+  text-align: center;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: 'Roboto', helvetica, arial, sans-serif;
+  background:#74a89d;
+  color:#fff;
+}
+
+.notes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+}
+
+.add-button {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  border: none;
+  background: #d3f7ef;
+  box-shadow: 5px 5px 7px rgba(109, 109, 109, 0.7);
+  color: #18332e;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+ul,li {
+  list-style:none;
+}
+
+ul {
+  position: relative;
+  width: 100%;
+}
+ul li {
+  position: absolute;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:10em;
+  width:10em;
+  padding:1em;
+  box-shadow: 5px 5px 7px rgba(109, 109, 109,.7);
+  transform: rotate(-6deg);
+  transition: transform .15s linear;
+  border-radius: 5px;
+  user-select: none;
+}
+
+ul li.new-note {
+  z-index: 1000;
+}
+
+ul li:nth-child(even) {
+  transform:rotate(4deg);
+  top:5px;
+  background:#cfc;
+}
+ul li:nth-child(3n) {
+  transform:rotate(-3deg);
+  top:-5px;
+  background:#ccecff;
+}
+ul li:nth-child(5n) {
+  transform:rotate(5deg);
+  top:-10px;
+}
+
+ul li textarea {
+  width: 90%;
+  max-height: 150px;
+  margin-top: 18px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-family: 'Roboto', helvetica, arial, sans-serif;
+  font-size: 16px;
+  resize: none;
+}
+
+ul li .note-wrapper {
+  position: relative;
+}
+
+ul li .note-text {
+  padding-top: 18px;
+  width: 90%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+ul li .delete-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  border: none;
+  background: no-repeat;
+  font-size: 25px;
+  color: #3e7b6e;
+}
+
+ul li {
+  margin:1em;
+}
